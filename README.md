@@ -3,7 +3,8 @@
 胡剴捷/1121429
 
 Description: This repository is for the note of the Data Structure class
-📘 Arrays — Notes
+
+📘 Arrays — Notes(尚未進行排版)
 1. 基本概念
 
 Array:

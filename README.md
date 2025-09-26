@@ -4,4 +4,4 @@
 
 Description: This repository is for the note of the Data Structure class
 
-[Contribution guidelines for this project](Note_lesson1.md)
+[Note Of The Lesson1](Note_lesson1.md)

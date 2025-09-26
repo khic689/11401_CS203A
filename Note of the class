@@ -75,7 +75,7 @@ Store(A, i, x) 更新元素
 
 配置在 heap
 
-使用後需 free 釋放避免 memory leak
+**使用後需 free 釋放避免 memory leak**
 
 動態陣列範例
 

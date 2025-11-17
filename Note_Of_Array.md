@@ -17,32 +17,32 @@ Array:
 
 ### 一維 (1D)
 
-``
+```
 int array[5]; // 宣告
 int array[5] = {10, 20, 30, 40, 50}; // 初始化
 printf("%d", array[2]); // 印出 30
-``
+```
 
 ### 二維 (2D)
 
-``
+```
 int array2d[3][4] = {
   {1, 2, 3, 4},
   {5, 6, 7, 8},
   {9, 10, 11, 12}
 };
 printf("%d", array2d[1][2]); // 印出 7
-``
+```
 
 ### 三維 (3D)
 
-``
+```
 int array3d[2][3][4] = {
   { {1,2,3,4}, {5,6,7,8}, {9,10,11,12} },
   { {13,14,15,16}, {17,18,19,20}, {21,22,23,24} }
 };
 printf("%d", array3d[1][2][3]); // 印出 24
-``
+```
 
 ## 3. ADT: Array
 
@@ -105,27 +105,27 @@ Flexibility	低	高
 
 Bubble Sort
 
-``
+```
 for i = 1 to n-1:
   for j = 1 to n-i:
     if A[j] > A[j+1]:
       swap(A[j], A[j+1])
-``
+```
 
 Selection Sort
 
-``
+```
 for i = 1 to n-1:
   minIndex = i
   for j = i+1 to n:
     if A[j] < A[minIndex]:
       minIndex = j
   swap(A[i], A[minIndex])
-``
+```
 
 Insertion Sort
 
-``
+```
 for i = 2 to n:
   key = A[i]
   j = i-1
@@ -133,7 +133,7 @@ for i = 2 to n:
     A[j+1] = A[j]
     j--
   A[j+1] = key
-``
+```
 
 ## 7. 搜尋 (Searching)
 

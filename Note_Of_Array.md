@@ -1,6 +1,6 @@
 # Arrays — Notes
 
-##1. 基本概念
+## 1. 基本概念
 
 Array:
 一組元素存放在連續記憶體位置，可透過索引直接存取。
@@ -13,9 +13,9 @@ Array:
 
 常數時間存取 (O(1))
 
-##2. 一維、二維、三維陣列
+## 2. 一維、二維、三維陣列
 
-###一維 (1D)
+### 一維 (1D)
 
 ``
 int array[5]; // 宣告
@@ -23,7 +23,7 @@ int array[5] = {10, 20, 30, 40, 50}; // 初始化
 printf("%d", array[2]); // 印出 30
 ``
 
-###二維 (2D)
+### 二維 (2D)
 
 ``
 int array2d[3][4] = {
@@ -34,7 +34,7 @@ int array2d[3][4] = {
 printf("%d", array2d[1][2]); // 印出 7
 ``
 
-###三維 (3D)
+### 三維 (3D)
 
 ``
 int array3d[2][3][4] = {
@@ -44,7 +44,7 @@ int array3d[2][3][4] = {
 printf("%d", array3d[1][2][3]); // 印出 24
 ``
 
-##3. ADT: Array
+## 3. ADT: Array
 
 抽象資料型態 (ADT) 定義：
 
@@ -58,7 +58,7 @@ Retrieve(A, i) 取得元素
 
 Store(A, i, x) 更新元素
 
-##4. 靜態 vs 動態陣列
+## 4. 靜態 vs 動態陣列
 靜態陣列
 
 大小固定 (編譯期決定)
@@ -89,7 +89,7 @@ for (int i = n/2; i < n; i++) array[i] = i + 1;
 free(array);
 ``
 
-##5. C++ STL
+## 5. C++ STL
 
 std::array: 靜態陣列，大小固定
 
@@ -101,7 +101,7 @@ Memory	Stack	Heap
 Access Speed	最快	快，略有額外開銷
 Flexibility	低	高
 
-##6. 排序 (Sorting)
+## 6. 排序 (Sorting)
 
 Bubble Sort
 
@@ -135,7 +135,7 @@ for i = 2 to n:
   A[j+1] = key
 ``
 
-##7. 搜尋 (Searching)
+## 7. 搜尋 (Searching)
 
 Unsorted Array: Linear search (O(n))
 
@@ -145,7 +145,7 @@ Linear search (O(n))
 
 Binary search (O(log n))
 
-##8. 常見操作 & 複雜度
+## 8. 常見操作 & 複雜度
 Operation	Complexity	說明
 Access	O(1)	直接透過 index
 Update	O(1)	直接更新
@@ -154,7 +154,7 @@ Delete	O(n)	需移動元素
 Traverse	O(n)	全部走訪
 Search	O(n) / O(log n)	無序=線性、有序=二分
 
-##9. 陣列型別
+## 9. 陣列型別
 
 Integer array → int, short, long, fixed-width (int32_t…)
 
@@ -162,7 +162,7 @@ Character array → char
 
 String array → char array (C-style string), 或字串陣列
 
-##10. 優缺點
+## 10. 優缺點
 
 優點
 
@@ -176,7 +176,7 @@ String array → char array (C-style string), 或字串陣列
 
 靜態陣列不可調整大小
 
-##11. 應用
+## 11. 應用
 
 建立基礎資料結構 (stack, queue)
 

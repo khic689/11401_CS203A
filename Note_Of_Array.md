@@ -75,7 +75,7 @@ Store(A, i, x) 更新元素
 
 動態陣列範例
 
-``
+```
 int *array;
 int n = 10;
 array = (int *) malloc(n * sizeof(int));
@@ -87,7 +87,7 @@ array = (int *) realloc(array, n * sizeof(int));
 for (int i = n/2; i < n; i++) array[i] = i + 1;
 
 free(array);
-``
+```
 
 ## 5. C++ STL
 

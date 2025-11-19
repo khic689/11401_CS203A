@@ -9,8 +9,9 @@
    Development History:
     - 2025/11/11: Initial implementation
     - 2025/11/17: Refactored to use hash_fn.hpp
+    - 2025/11/20: Finish myHashInt implementation
 
-   Developer: Yu-Feng Huang <yfhuang@saturn.yzu.edu.tw>
+   Developer: Hu-Kai-Chieh <s1121429@mail.yzu.edu.tw>
  */
 #include "hash_fn.hpp"
 

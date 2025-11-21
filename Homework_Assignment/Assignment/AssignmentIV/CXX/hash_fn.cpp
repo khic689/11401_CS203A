@@ -34,7 +34,12 @@ int myHashInt(int key, int m) {
 }
 
 int myHashString(const std::string& str, int m) {
+    if (m <= 0) return 0;  // Ensure m is valid
+
     unsigned long hash = 0;
-    // TODO: replace with your own design
+    for (char ch : str) {  // go through each character in the string
+        hash = hash * 31 + static_cast<unsigned long>(ch);  // convert char to ASCII and compute hash value
+    }
+
     return static_cast<int>(hash % m);  // basic division method
 }

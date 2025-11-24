@@ -4,23 +4,49 @@ This assignment focuses on the design and observation of hash functions using C/
 Students are expected to implement and analyze the behavior of hash functions, 
 evaluate their efficiency, and understand their applications in computer science.
 
-Developer: [Your Name]  
-Email: [Your email]  
+**Developer:** Hu-Kai-Chieh  
+**Email:** s1121429@mail.yzu.edu.tw  
+
+## Environment Note
+* **Operating System:** Linux (WSL 2 - Windows Subsystem for Linux, Ubuntu 22.04 LTS)
+* **Platform:** Windows 10/11 Host
+* **Editor:** VS Code (Remote - WSL)
+* *Note: All compilation and execution commands below are intended for the WSL terminal.*
 
 ## My Hash Function
+
 ### Integer Keys 
-- Formula / pseudocode:
+- **Formula / pseudocode:**
   ```text
-  [Your implementation here]
-  ```
-- Rationale: [Explain your design choices and how they minimize collisions.]
+  FUNCTION myHashInt(key, m)
+      IF m <= 0 THEN RETURN 0
+      
+      k = (unsigned int) key
+      k = k XOR (k >> 16)      // Mix high and low bits
+      k = k * 31               // Multiplication for scattering
+      k = k XOR (k >> 13)      // Further mixing
+      k = k + (k << 5)         // Non-linear variation
+      
+      RETURN (int) (k MOD m)
+  END FUNCTION
+兒Rationale: I implemented a Bit-Mixing algorithm inspired by Thomas Wang's integer hash. Simple division (key % m) fails when keys have patterns (e.g., 10, 20, 30 with m=10). By using XOR-shifts and multiplication by a prime (31), I ensure the "Avalanche Effect"—changing one bit in the input affects many bits in the output, minimizing collisions even for patterned data.
 
 ### Non-integer Keys
 - Formula / pseudocode:
-  ```text
-  [Your implementation here]
-  ```
-- Rationale: [Explain your approach and its effectiveness for non-integer keys.]
+```
+  FUNCTION myHashString(str, m)
+    IF m <= 0 THEN RETURN 0
+
+    hash_val = 0
+    FOR EACH char ch IN str DO
+        // Polynomial Rolling Hash
+        hash_val = (hash_val * 31) + ASCII(ch)
+    END FOR
+
+    RETURN (int) (hash_val MOD m)
+END FUNCTION
+```
+- Rationale: I used the Polynomial Rolling Hash (similar to Java's hashCode). It treats the string as a polynomial with a prime base (31). This ensures that "abc" and "cba" produce different hashes (positional weight). The multiplier 31 is chosen because it is an odd prime, reducing the chance of common factors with the table size m.
 
 ## Experimental Setup
 - Table sizes tested (m): 10, 11, 37
@@ -43,6 +69,9 @@ Email: [Your email]
 - The project uses a comprehensive Makefile that builds both C and C++ versions with proper flags:
   ```bash
   # Build both C and C++ versions
+  # Build both C and C++ versions (or default target)
+  make
+  # OR
   make all
   
   # Build only C version
@@ -79,6 +108,10 @@ Email: [Your email]
   ```
 
 ### Result Snapshot
+
+[snapshot of working]<img width="559" height="842" alt="螢幕擷取畫面 2025-11-24 085329" src="https://github.com/user-attachments/assets/e46993c2-9388-4495-a2e1-fbcf4167d12c" />
+
+
 - Example output for integers:
   ```
   === Hash Function Observation (C Version) ===

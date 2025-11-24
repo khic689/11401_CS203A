@@ -112,6 +112,8 @@ END FUNCTION
 [snapshot of working]<img width="559" height="842" alt="螢幕擷取畫面 2025-11-24 085329" src="https://github.com/user-attachments/assets/e46993c2-9388-4495-a2e1-fbcf4167d12c" />
 
 
+
+
 - Example output for integers:
   ```
   === Hash Function Observation (C Version) ===

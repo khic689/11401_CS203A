@@ -12,16 +12,18 @@
   # 3. 衝突解決策略 (Collision Handling) 
 
   當兩個不同的 Key 雜湊到相同索引時會發生「衝突」 。
+
+  ```
+  鏈結法 (Chaining)：在每個桶子 (Bucket) 維護一個鏈結串列 。
   
-  ## 鏈結法 (Chaining)：在每個桶子 (Bucket) 維護一個鏈結串列 。
-  
-  ## 開放定址法 (Open Addressing)：
+  開放定址法 (Open Addressing)：
 
-  ## 線性探測 (Linear Probing)：順序尋找下一個空位。缺點是容易產生「主要叢集」 (Primary Clustering) 。
+  線性探測 (Linear Probing)：順序尋找下一個空位。缺點是容易產生「主要叢集」 (Primary Clustering) 。
 
-  ## 二次探測 (Quadratic Probing)：以平方間距尋找空位，減少叢集 。
+  二次探測 (Quadratic Probing)：以平方間距尋找空位，減少叢集 。
 
-  ## 雙重雜湊 (Double Hashing)：使用第二個雜湊函數決定間距 。
+  雙重雜湊 (Double Hashing)：使用第二個雜湊函數決定間距 。
+  ```
 
 # 4. 複雜度分析
   平均情況：插入、刪除、搜尋均為 $O(1)$。

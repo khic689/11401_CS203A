@@ -1,4 +1,4 @@
-1. 核心定義與限制
+# 1. 核心定義與限制
 
 堆疊 (Stack)：一種線性的資料結構，遵循「後進先出」(Last-In-First-Out, LIFO) 原則 。想像成一疊盤子，你只能從頂部放入或取出 。
 
@@ -10,7 +10,7 @@
 
 
 
-2. 視覺化結構 (Visualization)
+# 2. 視覺化結構 (Visualization)
 
 堆疊：只有一個開口（Top），所有的插入 (Push) 與刪除 (Pop) 都在此端進行 。
 
@@ -19,22 +19,23 @@
 
 
 
-3. 操作與演算法邏輯
+# 3. 操作與演算法邏輯
+
 堆疊操作 (Stack ADT) 
 
-Push(item)：將元素壓入頂端。
+    Push(item)：將元素壓入頂端。
 
-Pop()：移除並回傳頂端元素。
+    Pop()：移除並回傳頂端元素。
 
-IsEmpty()：檢查堆疊是否為空。
+    IsEmpty()：檢查堆疊是否為空。
 
-IsFull()：檢查是否超過最大容量 MAX_SIZE。
+    IsFull()：檢查是否超過最大容量 MAX_SIZE。
 
-佇列操作 (Queue ADT) 
+    佇列操作 (Queue ADT) 
 
-AddQ(item)：在 Rear 端加入元素。
+    AddQ(item)：在 Rear 端加入元素。
 
-DeleteQ()：在 Front 端移除元素。
+    DeleteQ()：在 Front 端移除元素。
 
 
 環狀佇列 (Circular Queue)：利用模數運算 (%) 讓陣列空間循環使用，解決空間浪費問題 。
